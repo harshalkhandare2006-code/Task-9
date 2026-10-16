@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.book-button {
+    /* existing styles */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-button:hover {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 8px 20px rgba(38, 158, 215, 0.4);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #293443;
+    background-color: #ffffff;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 90px;
+    padding: 24px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+}
+
+.logo {
+    color: #293443;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.nav-links a,
+.username {
+    text-decoration: none;
+    font-size: 17px;
+    color: #626b76;
+}
+
+.username {
+    color: #269bd2;
+    font-weight: 600;
+}
+
+.menu-button {
+    display: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 6px;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 3;
+}
+
+.menu-button span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #626b76;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    min-height: 100vh;
+    padding: 100px 20px 30px;
+    background-color: #111111;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    z-index: 2;
+}
+
+.mobile-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* The menu opens when the hamburger button receives focus. */
+.menu-button:focus + .mobile-menu {
+    display: flex;
+}
+
+.hero {
+    min-height: 560px;
+    padding: 45px 6% 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 520px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.hero-content h1 span {
+    color: #279ed7;
+}
+
+.hero-content p {
+    color: #8a9097;
+    font-size: 19px;
+    line-height: 1.65;
+    margin-bottom: 30px;
+}
+
+.book-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+    padding: 0 36px;
+    border-radius: 28px;
+    background-color: #269ed7;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .navbar {
+        min-height: 75px;
+        padding: 20px 4%;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a,
+    .username {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 30px 4%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .book-button {
+        min-height: 54px;
+        padding: 0 28px;
+        font-size: 15px;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        min-height: 70px;
+        padding: 18px 5%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .username {
+        font-size: 14px;
+        margin-left: auto;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    .hero {
+        padding: 28px 5% 35px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    .book-button {
+        width: 100%;
+        min-height: 56px;
+        padding: 0 18px;
+        font-size: 15px;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+    }
+}
